@@ -1,9 +1,19 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 export default function Header() {
+  // const [headerShadow, setHeaderShadow] = useState(false);
   const [isActive, setIsActive] = useState(false);
+  const [dropDownContent, setDropDownContent] = useState(false);
+  const [dropDownContent2, setDropDownContent2] = useState(false);
+  const [dropDownContent3, setDropDownContent3] = useState(false);
+  const [dropDownContent4, setDropDownContent4] = useState(false);
+
+  // Add event listener when the component mounts
+  // window.addEventListener("scroll", () => {
+  //   return console.log(window.scrollY);
+  // });
   return (
     <header>
       <div className="container">
@@ -19,7 +29,15 @@ export default function Header() {
         <nav className={`${isActive ? "active" : ""}`}>
           <ul className="nav-ul">
             <li className="nav-li">
-              <Link href="#" className="nav-link">
+              <Link
+                onClick={() => {
+                  !dropDownContent
+                    ? setDropDownContent(true)
+                    : setDropDownContent(false);
+                }}
+                href="#"
+                className="nav-link"
+              >
                 solutions
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +53,11 @@ export default function Header() {
                   />
                 </svg>
               </Link>
-              <div className="dropdown-content">
+              <div
+                className={`dropdown-content ${
+                  dropDownContent ? "dropdown-content-active" : ""
+                }`}
+              >
                 <ul className="dropdown-ul">
                   <li>
                     <Link href="/features">Features & Functionality</Link>
@@ -63,7 +85,15 @@ export default function Header() {
               </div>
             </li>
             <li className="nav-li">
-              <Link href="#" className="nav-link2">
+              <Link
+                onClick={() => {
+                  !dropDownContent2
+                    ? setDropDownContent2(true)
+                    : setDropDownContent2(false);
+                }}
+                href="#"
+                className="nav-link2"
+              >
                 services
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +109,11 @@ export default function Header() {
                   />
                 </svg>
               </Link>
-              <div className="dropdown-content dropdown-content2">
+              <div
+                className={`dropdown-content ${
+                  dropDownContent2 ? "dropdown-content-active2" : ""
+                }`}
+              >
                 <ul className="dropdown-ul">
                   <li>
                     <Link href="/professional-services.html">
@@ -105,7 +139,15 @@ export default function Header() {
               </div>
             </li>
             <li className="nav-li">
-              <Link href="#" className="nav-link3">
+              <Link
+                onClick={() => {
+                  !dropDownContent3
+                    ? setDropDownContent3(true)
+                    : setDropDownContent3(false);
+                }}
+                href="#"
+                className="nav-link3"
+              >
                 resources
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +163,11 @@ export default function Header() {
                   />
                 </svg>
               </Link>
-              <div className="dropdown-content dropdown-content3">
+              <div
+                className={`dropdown-content ${
+                  dropDownContent3 ? "dropdown-content-active3" : ""
+                }`}
+              >
                 <ul className="dropdown-ul">
                   <li>
                     <Link href="/news">News & Insights</Link>
@@ -143,7 +189,15 @@ export default function Header() {
               </div>
             </li>
             <li className="nav-li">
-              <Link href="#" className="nav-link4">
+              <Link
+                onClick={() => {
+                  !dropDownContent4
+                    ? setDropDownContent4(true)
+                    : setDropDownContent4(false);
+                }}
+                href="#"
+                className="nav-link4"
+              >
                 company
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -159,7 +213,11 @@ export default function Header() {
                   />
                 </svg>
               </Link>
-              <div className="dropdown-content dropdown-content4">
+              <div
+                className={`dropdown-content ${
+                  dropDownContent4 ? "dropdown-content-active4" : ""
+                }`}
+              >
                 <ul className="dropdown-ul">
                   <li>
                     <Link href="/about">About Us</Link>

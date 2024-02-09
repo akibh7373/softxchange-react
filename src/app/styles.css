@@ -1703,7 +1703,7 @@ iframe {
     align-items: flex-start;
     flex-direction: column;
   }
-  header .active {
+  .active {
     left: 0;
     color: var(--dark-100);
   }
@@ -1728,6 +1728,7 @@ iframe {
     width: 26px;
     height: 26px;
     color: var(--dark-100);
+    cursor: pointer;
     z-index: 9999;
   }
   .hero {

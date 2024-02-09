@@ -1,8 +1,9 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 export default function Header() {
+  const [isActive, setIsActive] = useState(false);
   return (
     <header>
       <div className="container">
@@ -15,7 +16,7 @@ export default function Header() {
             alt="brand-logo"
           />
         </Link>
-        <nav>
+        <nav className={`${isActive ? "active" : ""}`}>
           <ul className="nav-ul">
             <li className="nav-li">
               <Link href="#" className="nav-link">
@@ -190,6 +191,9 @@ export default function Header() {
             contact us
           </Link>
           <svg
+            onClick={() => {
+              setIsActive(false);
+            }}
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
@@ -201,6 +205,9 @@ export default function Header() {
           </svg>
         </nav>
         <svg
+          onClick={() => {
+            setIsActive(true);
+          }}
           xmlns="http://www.w3.org/2000/svg"
           width="20"
           height="20"

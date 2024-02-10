@@ -3,19 +3,27 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 export default function Header() {
-  // const [headerShadow, setHeaderShadow] = useState(false);
+  const [headerShadow, setHeaderShadow] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const [dropDownContent, setDropDownContent] = useState(false);
   const [dropDownContent2, setDropDownContent2] = useState(false);
   const [dropDownContent3, setDropDownContent3] = useState(false);
   const [dropDownContent4, setDropDownContent4] = useState(false);
-
-  // Add event listener when the component mounts
-  // window.addEventListener("scroll", () => {
-  //   return console.log(window.scrollY);
-  // });
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setHeaderShadow(true);
+      } else {
+        setHeaderShadow(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <header>
+    <header className={headerShadow ? "header-shadow" : ""}>
       <div className="container">
         <Link href="/">
           <Image

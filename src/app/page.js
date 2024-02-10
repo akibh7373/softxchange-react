@@ -64,7 +64,6 @@ export default function Home() {
                 </span>
               </p>
             </div>
-            <div className="chart-hero"></div>
             <div className="hero-right-bottom">
               <div className="hero-right-wrapper">
                 <div className="hero-right-inner">

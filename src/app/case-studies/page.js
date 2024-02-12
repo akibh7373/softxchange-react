@@ -1,4 +1,3 @@
-import React from "react";
 import FeaturedIn from "@/components/FeaturedIn";
 import Stories from "@/components/Stories";
 import Contact from "@/components/Contact";

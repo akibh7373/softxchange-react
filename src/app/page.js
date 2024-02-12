@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import FeaturedIn from "@/components/FeaturedIn";
@@ -64,6 +63,7 @@ export default function Home() {
                 </span>
               </p>
             </div>
+            <div></div>
             <div className="hero-right-bottom">
               <div className="hero-right-wrapper">
                 <div className="hero-right-inner">

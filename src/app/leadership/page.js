@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Contact from "@/components/Contact";
 import LeadershipCard from "@/components/LeadershipCard";

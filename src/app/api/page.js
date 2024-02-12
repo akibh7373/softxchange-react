@@ -1,4 +1,3 @@
-import React from "react";
 import FeaturedIn from "@/components/FeaturedIn";
 import RevolutionCard from "@/components/RevolutionCard";
 import PlatformFeaturesCard from "@/components/PlatformFeaturesCard";
